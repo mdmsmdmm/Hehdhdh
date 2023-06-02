@@ -1,0 +1,569 @@
+-- Keyboard script by Tag365 --
+
+-- Free to use, edit, and copy. --
+
+local nKbWid, nKbHei = 80, 18
+
+local tKeyboard = {} -- This houses the keyboard keys.
+
+-- Set up keyboard
+
+tKeyboard[1] = {}
+
+tKeyboard[1].y = 1/nKbHei
+
+tKeyboard[1].height = 1/nKbHei
+
+tKeyboard[1].keys = {
+
+	{"esc", 1, 4, nil},	{"f1", 5, 8, keys.f1},
+
+	{"f2", 9, 12, keys.f2},
+
+	{"f3", 13, 16, keys.f3},
+
+	{"f4", 17, 20, keys.f4},
+
+	{"f5", 21, 24, keys.f5},
+
+	{"f6", 25, 28, keys.f6},
+
+	{"f7", 29, 32, keys.f7},
+
+	{"f8", 33, 36, keys.f8},
+
+	{"f9", 37, 40, keys.f9},
+
+	{"f10", 41, 44, keys.f10},
+
+	{"f11", 45, 48, keys.f11},
+
+	{"f12", 49, 52, keys.f12},
+
+	{"ins", 53, 56, keys.insert},
+
+	{"del", 57, 60, keys.delete},
+
+	{"prnt", 63, 67, keys.home},
+
+	{"sclk", 68, 71, keys.scrollLock},
+
+	{"paus", 72, 76, keys.pause},
+
+	{"brk", 77, 80, -1},
+
+}
+
+tKeyboard[2] = {}
+
+tKeyboard[2].y = 4/nKbHei
+
+tKeyboard[2].height = 2/nKbHei
+
+tKeyboard[2].keys = {
+
+	{"~", 1, 4, keys.grave},
+
+	{"1", 5, 8, keys.one},
+
+	{"2", 9, 12, keys.two},
+
+	{"3", 13, 16, keys.three},
+
+	{"4", 17, 20, keys.four},
+
+	{"5", 21, 24, keys.five},
+
+	{"6", 25, 28, keys.six},
+
+	{"7", 29, 32, keys.seven},
+
+	{"8", 33, 36, keys.eight},
+
+	{"9", 37, 40, keys.nine},
+
+	{"0", 41, 44, keys.ten},
+
+	{"-", 45, 48, keys.minus},
+
+	{"=", 49, 52, keys.equals},
+
+	{"<-", 53, 60, keys.backspace},
+
+	{"nmlk", 63, 67, nil},
+
+	{"/", 68, 71, keys.slash},
+
+	{"*", 72, 76, keys.multiply},
+
+	{"-", 77, 80, keys.minus},
+
+}
+
+tKeyboard[3] = {}
+
+tKeyboard[3].y = 7/nKbHei
+
+tKeyboard[3].height = 2/nKbHei
+
+tKeyboard[3].keys = {
+
+	{"tab", 1, 4, keys.tab},
+
+	{"Q", 5, 8, keys.q},
+
+	{"W", 9, 12, keys.w},
+
+	{"E", 13, 16, keys.e},
+
+	{"R", 17, 20, keys.r},
+
+	{"T", 21, 24, keys.t},
+
+	{"Y", 25, 28, keys.y},
+
+	{"U", 29, 32, keys.u},
+
+	{"I", 33, 36, keys.i},
+
+	{"O", 37, 40, keys.o},
+
+	{"P", 41, 44, keys.p},
+
+	{"[", 45, 48, keys.leftBracket},
+
+	{"]", 49, 52, keys.rightBracket},
+
+	{"\\", 53, 60, keys.backslash},
+
+	{"home", 63, 67, keys.home},
+
+	{"up", 68, 71, keys.up},
+
+	{"pgup", 72, 76, keys.pageUp},
+
+	{"+", 77, 80, keys.plus},
+
+}
+
+tKeyboard[4] = {}
+
+tKeyboard[4].y = 10/nKbHei
+
+tKeyboard[4].height = 2/nKbHei
+
+tKeyboard[4].keys = {
+
+	{"caps", 1, 4, keys.capsLock},
+
+	{"A", 5, 8, keys.a},
+
+	{"S", 9, 12, keys.s},
+
+	{"D", 13, 16, keys.d},
+
+	{"F", 17, 20, keys.f},
+
+	{"G", 21, 24, keys.g},
+
+	{"H", 25, 28, keys.h},
+
+	{"J", 29, 32, keys.j},
+
+	{"K", 33, 36, keys.k},
+
+	{"L", 37, 40, keys.l},
+
+	{";", 41, 44, keys.semiColon},
+
+	{"'", 45, 48, keys.apostrophe},
+
+	{"enter", 49, 60, keys.enter},
+
+	{"left", 63, 67, keys.left},
+
+	{"5", 68, 71, keys.numPad5},
+
+	{"righ", 72, 76, keys.right},
+
+	{"+", 77, 80, keys.numPadAdd},
+
+}
+
+tKeyboard[5] = {}
+
+tKeyboard[5].y = 13/nKbHei
+
+tKeyboard[5].height = 2/nKbHei
+
+tKeyboard[5].keys = {
+
+	{"shif", 1, 4, keys.leftShift},
+
+	{"Z", 5, 8, keys.z},
+
+	{"X", 9, 12, keys.x},
+
+	{"C", 13, 16, keys.c},
+
+	{"V", 17, 20, keys.v},
+
+	{"B", 21, 24, keys.b},
+
+	{"N", 25, 28, keys.n},
+
+	{"M", 29, 32, keys.m},
+
+	{",", 33, 36, keys.comma},
+
+	{".", 37, 40, keys.period},
+
+	{"/", 41, 44, keys.slash},
+
+	{"shift", 45, 60, keys.rightShift},
+
+	{"end", 63, 67, keys["end"]},
+
+	{"down", 68, 71, keys.down},
+
+	{"pgdn", 72, 76, keys.pageDown},
+
+	{"ent", 77, 80, keys.numPadEnter},
+
+}
+
+tKeyboard[6] = {}
+
+tKeyboard[6].y = 16/nKbHei
+
+tKeyboard[6].height = 2/nKbHei
+
+tKeyboard[6].keys = {
+
+	{"ctrl", 1, 5, keys.leftCtrl},
+
+	{"alt", 6, 9, keys.leftAlt},
+
+	{"space", 10, 40, keys.space},
+
+	{"alt", 41, 44, keys.rightAlt},
+
+	{"ctrl", 45, 60, keys.rightCtrl},
+
+	{"insert", 63, 71, keys["end"]},
+
+	{"delete", 72, 76, keys.delete},
+
+	{"ent", 77, 80, keys.numPadEnter},
+
+}
+
+local tochar = {
+
+	[2] = "1",
+
+	[3] = "2",
+
+	[4] = "3",
+
+	[5] = "4",
+
+	[6] = "5",
+
+	[7] = "6",
+
+	[8] = "7",
+
+	[9] = "8",
+
+	[10] = "9",
+
+	[11] = "0",
+
+	[12] = "-",
+
+	[13] = "=",
+
+	[16] = "q",
+
+	[17] = "w",
+
+	[18] = "e",
+
+	[19] = "r",
+
+	[20] = "t",
+
+	[21] = "y",
+
+	[22] = "u",
+
+	[23] = "i",
+
+	[24] = "o",
+
+	[25] = "p",
+
+	[26] = "[",
+
+	[27] = "]",
+
+	[30] = "a",
+
+	[31] = "s",
+
+	[32] = "d",
+
+	[33] = "f",
+
+	[34] = "g",
+
+	[35] = "h",
+
+	[36] = "j",
+
+	[37] = "k",
+
+	[38] = "l",
+
+	[39] = ";",
+
+	[40] = "'",
+
+	[41] = "`",
+
+	[43] = "\\",
+
+	[44] = "z",
+
+	[45] = "x",
+
+	[46] = "c",
+
+	[47] = "v",
+
+	[48] = "b",
+
+	[49] = "n",
+
+	[50] = "m",
+
+	[51] = ",",
+
+	[52] = ".",
+
+	[53] = "/",
+
+	[57] = " "
+
+}
+
+local tocharshift = {
+
+	[2] = "!",
+
+	[3] = "@",
+
+	[4] = "#",
+
+	[5] = "$",
+
+	[6] = "%",
+
+	[7] = "^",
+
+	[8] = "&",
+
+	[9] = "*",
+
+	[10] = "(",
+
+	[11] = ")",
+
+	[12] = "_",
+
+	[13] = "=",
+
+	[26] = "{",
+
+	[27] = "}",
+
+	[39] = ":",
+
+	[40] = '"',
+
+	[43] = '|',
+
+	[51] = '<',
+
+	[52] = '>',
+
+	[53] = '?',
+
+}
+
+local nWidth, nHeight = term.getSize()
+
+local nBgColor, nTextColor = colors.lightGray, colors.black
+
+local nKeyBgColor, nKeyTextColor = colors.blue, colors.black
+
+local setTextColor, setBackColor = term.setTextColor, term.setBackgroundColor
+
+local setCursorPos, clear = term.setCursorPos, term.clear
+
+-- Fix the width of each key.
+
+for row, rowval in ipairs(tKeyboard) do
+
+	for key, keyval in ipairs(rowval.keys) do
+
+		keyval[2] = keyval[2]/nKbWid
+
+		keyval[3] = keyval[3]/nKbWid
+
+	end
+
+end
+
+-- Clears the screen and restores it to the default colors.
+
+local function clearTerm()
+
+	setTextColor(nTextColor)
+
+	setBackColor(nBgColor)
+
+	setCursorPos(1, 1)
+
+	clear()
+
+end
+
+-- Used to draw the keyboard.
+
+local function drawKeyboard()
+
+	clearTerm()
+
+	setTextColor(nKeyTextColor)
+
+	setBackColor(nKeyBgColor)
+
+	local curHeight = 1
+
+	for row, rowval in ipairs(tKeyboard) do
+
+		curHeight = math.ceil(rowval.y*nHeight)
+
+		local rowHeight = math.floor(rowval.height*nHeight)
+
+		for key, keyval in ipairs(rowval.keys) do
+
+			for k=curHeight, curHeight + rowHeight - 1 do
+
+				setCursorPos(math.floor(keyval[2]*nWidth), k)
+
+				term.write(string.rep(" ", math.floor(keyval[3]*nWidth) - math.floor(keyval[2]*nWidth)))
+
+			end
+
+			setCursorPos(math.floor(keyval[2]*nWidth), curHeight)
+
+			term.write(keyval[1])
+
+		end
+
+		curHeight = curHeight + rowHeight
+
+	end
+
+end
+
+local function touchKeyboard(x, y)
+
+	for row, rowval in ipairs(tKeyboard) do
+
+		curHeight = math.ceil(rowval.y*nHeight)
+
+		local rowHeight = math.floor(rowval.height*nHeight)
+
+		if y >= curHeight and y <= curHeight + rowHeight - 1 then
+
+			for key, keyval in ipairs(rowval.keys) do
+
+				if x >= math.floor(keyval[2]*nWidth) and x <= math.floor(keyval[3]*nWidth) then
+
+					os.queueEvent("key", keyval[4])
+
+					if keyval[4] == 42 or keyval[4] == 54 then
+
+						bShift = not bShift
+
+					end
+
+					if not bShift then
+
+						if tochar[keyval[4]] then
+
+							os.queueEvent("char", tochar[keyval[4]])
+
+						end
+
+					else
+
+						if tocharshift[keyval[4]] then
+
+							os.queueEvent("char", tocharshift[keyval[4]])
+
+						elseif tochar[keyval[4]] then
+
+							os.queueEvent("char", string.upper(tochar[keyval[4]]))
+
+						end
+
+					end
+
+					return keyval[4]
+
+				end
+
+			end
+
+		end
+
+		curHeight = curHeight + rowHeight
+
+	end
+
+end
+
+-- This is called when the terminal resizes.
+
+local function onTermResize()
+
+	nWidth, nHeight = term.getSize()
+
+	drawKeyboard()
+
+end
+
+drawKeyboard()
+
+-- Main loop
+
+while true do
+
+	local event, p1, p2, p3 = os.pullEvent()
+
+	if event == "monitor_touch" then
+
+		touchKeyboard(p2, p3)
+
+	elseif event == "monitor_resize" or event == "term_resize" then
+
+		onTermResize()
+
+	end
+
+end
